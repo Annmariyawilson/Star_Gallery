@@ -1,0 +1,12 @@
+[
+  { "id": "1", "name": "Electronics", "nameAr": "إلكترونيات", "image": "assets/category-name.webp" },
+  { "id": "2", "name": "For Kids", "nameAr": "للأطفال", "image": "assets/category-name.webp" },
+  { "id": "3", "name": "Car Accesories", "nameAr": "إكسسوارات سيارات", "image": "assets/category-name.webp" },
+  { "id": "4", "name": "Personal Care", "nameAr": "العناية الشخصية", "image": "assets/category-name.webp" },
+  { "id": "5", "name": "Home & Kitchen", "nameAr": "المنزل والمطبخ", "image": "assets/category-name.webp" },
+  { "id": "6", "name": "Health Care", "nameAr": "الرعاية الصحية", "image": "assets/category-name.webp" },
+  { "id": "7", "name": "Smart Watches", "nameAr": "ساعات ذكية", "image": "assets/category-name.webp" },
+  { "id": "8", "name": "Fashion", "nameAr": "الأزياء", "image": "assets/category-name.webp" },
+  { "id": "9", "name": "Gaming", "nameAr": "ألعاب فيديو", "image": "assets/category-name.webp" },
+  { "id": "10", "name": "Cleaning", "nameAr": "أدوات تنظيف", "image": "assets/category-name.webp" }
+]

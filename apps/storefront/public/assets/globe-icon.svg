@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 22 22" fill="none">
+  <!-- Outer circle -->
+  <path d="M11 20C15.9706 20 20 15.9706 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20Z" stroke="#57545B" stroke-width="1.14" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Equator and meridians -->
+  <path d="M2 11H20M11 2C8.75321 4.35913 7.5 7.49215 7.5 10.75C7.5 14.0079 8.75321 17.1409 11 19.5C13.2468 17.1409 14.5 14.0079 14.5 10.75C14.5 7.49215 13.2468 4.35913 11 2Z" stroke="#57545B" stroke-width="1.14" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

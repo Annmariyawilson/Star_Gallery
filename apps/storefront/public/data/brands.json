@@ -1,0 +1,29 @@
+[
+  {
+    "id": "earbuds-brand",
+    "name": "PROMATE",
+    "logo": "PROMATE",
+    "tagline": "Innovation and Excellence",
+    "bannerUrl": "assets/bannner-1.webp",
+    "colorClass": "bg-brand-red",
+    "hexColor": "#8A181A"
+  },
+  {
+    "id": "jet-flame-brand",
+    "name": "JET FLAME",
+    "logo": "JET FLAME",
+    "tagline": "Precision & High Performance",
+    "bannerUrl": "assets/banner-2.webp",
+    "colorClass": "bg-brand-green",
+    "hexColor": "#0f5232"
+  },
+  {
+    "id": "car-charger-brand",
+    "name": "POWER DRIVE",
+    "logo": "POWER DRIVE",
+    "tagline": "Ultra Fast Charging On The Road",
+    "bannerUrl": "assets/banner-3.webp",
+    "colorClass": "bg-brand-blue",
+    "hexColor": "#029db2"
+  }
+]

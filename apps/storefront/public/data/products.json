@@ -1,0 +1,344 @@
+[
+  {
+    "id": "p1",
+    "brandId": "earbuds-brand",
+    "categoryId": "1",
+    "name": "Regular Fit Slogan Regular Fit",
+    "nameAr": "ريجولار فيت سلوجان ريجولار فيت",
+    "image": "assets/earbuds-banner-1.webp",
+    "images": [
+      "assets/earbuds-banner-1.webp",
+      "assets/earbuds-2.webp",
+      "assets/earbuds-3.webp"
+    ],
+    "rating": 4.5,
+    "reviewsCount": 125,
+    "price": 12.00,
+    "originalPrice": 300.00,
+    "discount": "40% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p2",
+    "brandId": "earbuds-brand",
+    "categoryId": "1",
+    "name": "Regular Fit Slogan Regular Fit",
+    "nameAr": "ريجولار فيت سلوجان ريجولار فيت",
+    "image": "assets/earbuds-banner-1.webp",
+    "images": [
+      "assets/earbuds-banner-1.webp",
+      "assets/earbuds-2.webp",
+      "assets/earbuds-3.webp"
+    ],
+    "rating": 4.5,
+    "reviewsCount": 125,
+    "price": 12.00,
+    "originalPrice": 300.00,
+    "discount": "40% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p3",
+    "brandId": "earbuds-brand",
+    "categoryId": "1",
+    "name": "Regular Fit Slogan Regular Fit",
+    "nameAr": "ريجولار فيت سلوجان ريجولار فيت",
+    "image": "assets/earbuds-banner-1.webp",
+    "images": [
+      "assets/earbuds-banner-1.webp",
+      "assets/earbuds-2.webp",
+      "assets/earbuds-3.webp"
+    ],
+    "rating": 4.5,
+    "reviewsCount": 125,
+    "price": 12.00,
+    "originalPrice": 300.00,
+    "discount": "40% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p4",
+    "brandId": "earbuds-brand",
+    "categoryId": "1",
+    "name": "Regular Fit Slogan Regular Fit",
+    "nameAr": "ريجولار فيت سلوجان ريجولار فيت",
+    "image": "assets/earbuds-banner-1.webp",
+    "images": [
+      "assets/earbuds-banner-1.webp",
+      "assets/earbuds-2.webp",
+      "assets/earbuds-3.webp"
+    ],
+    "rating": 4.5,
+    "reviewsCount": 125,
+    "price": 12.00,
+    "originalPrice": 300.00,
+    "discount": "40% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p5",
+    "brandId": "earbuds-brand",
+    "categoryId": "1",
+    "name": "Regular Fit Slogan Regular Fit",
+    "nameAr": "ريجولار فيت سلوجان ريجولار فيت",
+    "image": "assets/earbuds-banner-1.webp",
+    "images": [
+      "assets/earbuds-banner-1.webp",
+      "assets/earbuds-2.webp",
+      "assets/earbuds-3.webp"
+    ],
+    "rating": 4.5,
+    "reviewsCount": 125,
+    "price": 12.00,
+    "originalPrice": 300.00,
+    "discount": "40% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p6",
+    "brandId": "earbuds-brand",
+    "categoryId": "1",
+    "name": "Regular Fit Slogan Regular Fit",
+    "nameAr": "ريجولار فيت سلوجان ريجولار فيت",
+    "image": "assets/earbuds-banner-1.webp",
+    "images": [
+      "assets/earbuds-banner-1.webp",
+      "assets/earbuds-2.webp",
+      "assets/earbuds-3.webp"
+    ],
+    "rating": 4.5,
+    "reviewsCount": 125,
+    "price": 12.00,
+    "originalPrice": 300.00,
+    "discount": "40% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p7",
+    "brandId": "jet-flame-brand",
+    "categoryId": "5",
+    "name": "Turbo Jet Flame Windproof Outdoor Torch",
+    "nameAr": "شعلة توربو نفاثة مقاومة للرياح للرحلات",
+    "image": "assets/jet-flame-banner-2.webp",
+    "images": [
+      "assets/jet-flame-banner-2.webp",
+      "assets/jet-flame-2.webp",
+      "assets/jet-flame-3.webp"
+    ],
+    "rating": 4.8,
+    "reviewsCount": 95,
+    "price": 55.00,
+    "originalPrice": 90.00,
+    "discount": "39% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p8",
+    "brandId": "jet-flame-brand",
+    "categoryId": "5",
+    "name": "Heavy Duty High-Temperature Jet Torch 2.0",
+    "nameAr": "شعلة نفاثة شديدة التحمل درجات حرارة عالية",
+    "image": "assets/jet-flame-banner-2.webp",
+    "images": [
+      "assets/jet-flame-banner-2.webp",
+      "assets/jet-flame-2.webp",
+      "assets/jet-flame-3.webp"
+    ],
+    "rating": 4.7,
+    "reviewsCount": 140,
+    "price": 65.00,
+    "originalPrice": 110.00,
+    "discount": "41% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p9",
+    "brandId": "jet-flame-brand",
+    "categoryId": "5",
+    "name": "Precision Electronic Jet Flame Lighter Torch",
+    "nameAr": "ولاعة شعلة إلكترونية دقيقة متعددة الاستخدامات",
+    "image": "assets/jet-flame-banner-2.webp",
+    "images": [
+      "assets/jet-flame-banner-2.webp",
+      "assets/jet-flame-2.webp",
+      "assets/jet-flame-3.webp"
+    ],
+    "rating": 4.9,
+    "reviewsCount": 85,
+    "price": 49.00,
+    "originalPrice": 85.00,
+    "discount": "42% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p10",
+    "brandId": "jet-flame-brand",
+    "categoryId": "5",
+    "name": "Turbo Jet Flame Windproof Outdoor Torch",
+    "nameAr": "شعلة توربو نفاثة مقاومة للرياح للرحلات",
+    "image": "assets/jet-flame-banner-2.webp",
+    "images": [
+      "assets/jet-flame-banner-2.webp",
+      "assets/jet-flame-2.webp",
+      "assets/jet-flame-3.webp"
+    ],
+    "rating": 4.8,
+    "reviewsCount": 95,
+    "price": 55.00,
+    "originalPrice": 90.00,
+    "discount": "39% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p11",
+    "brandId": "jet-flame-brand",
+    "categoryId": "5",
+    "name": "Heavy Duty High-Temperature Jet Torch 2.0",
+    "nameAr": "شعلة نفاثة شديدة التحمل درجات حرارة عالية",
+    "image": "assets/jet-flame-banner-2.webp",
+    "images": [
+      "assets/jet-flame-banner-2.webp",
+      "assets/jet-flame-2.webp",
+      "assets/jet-flame-3.webp"
+    ],
+    "rating": 4.7,
+    "reviewsCount": 140,
+    "price": 65.00,
+    "originalPrice": 110.00,
+    "discount": "41% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p12",
+    "brandId": "jet-flame-brand",
+    "categoryId": "5",
+    "name": "Precision Electronic Jet Flame Lighter Torch",
+    "nameAr": "ولاعة شعلة إلكترونية دقيقة متعددة الاستخدامات",
+    "image": "assets/jet-flame-banner-2.webp",
+    "images": [
+      "assets/jet-flame-banner-2.webp",
+      "assets/jet-flame-2.webp",
+      "assets/jet-flame-3.webp"
+    ],
+    "rating": 4.9,
+    "reviewsCount": 85,
+    "price": 49.00,
+    "originalPrice": 85.00,
+    "discount": "42% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p13",
+    "brandId": "car-charger-brand",
+    "categoryId": "3",
+    "name": "Honton Outdoor Solar 4G/5G Quad-Lens 360° ...",
+    "nameAr": "كاميرا هونتون شمسية خارجية 360 درجة",
+    "image": "assets/car-charger-banner-3.webp",
+    "images": [
+      "assets/car-charger-banner-3.webp",
+      "assets/car-charger-2.webp",
+      "assets/car-charger-3.webp"
+    ],
+    "rating": 0,
+    "reviewsCount": 0,
+    "price": 299.00,
+    "originalPrice": 379.00,
+    "discount": "21% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p14",
+    "brandId": "car-charger-brand",
+    "categoryId": "3",
+    "name": "Rapid Multi-Port USB-C Fast Car Charger 67W",
+    "nameAr": "شاحن سيارة سريع متعدد المنافذ بقدرة 67 واط",
+    "image": "assets/car-charger-banner-3.webp",
+    "images": [
+      "assets/car-charger-banner-3.webp",
+      "assets/car-charger-2.webp",
+      "assets/car-charger-3.webp"
+    ],
+    "rating": 4.9,
+    "reviewsCount": 290,
+    "price": 95.00,
+    "originalPrice": 150.00,
+    "discount": "37% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p15",
+    "brandId": "car-charger-brand",
+    "categoryId": "3",
+    "name": "Transparent PowerDrive Car Adapter 45W",
+    "nameAr": "محول شاحن سيارة شفاف فائق السرعة بقدرة 45 واط",
+    "image": "assets/car-charger-banner-3.webp",
+    "images": [
+      "assets/car-charger-banner-3.webp",
+      "assets/car-charger-2.webp",
+      "assets/car-charger-3.webp"
+    ],
+    "rating": 4.8,
+    "reviewsCount": 130,
+    "price": 69.00,
+    "originalPrice": 110.00,
+    "discount": "37% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p16",
+    "brandId": "car-charger-brand",
+    "categoryId": "3",
+    "name": "Honton Outdoor Solar 4G/5G Quad-Lens 360° ...",
+    "nameAr": "كاميرا هونتون شمسية خارجية 360 درجة",
+    "image": "assets/car-charger-banner-3.webp",
+    "images": [
+      "assets/car-charger-banner-3.webp",
+      "assets/car-charger-2.webp",
+      "assets/car-charger-3.webp"
+    ],
+    "rating": 0,
+    "reviewsCount": 0,
+    "price": 299.00,
+    "originalPrice": 379.00,
+    "discount": "21% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p17",
+    "brandId": "car-charger-brand",
+    "categoryId": "3",
+    "name": "Rapid Multi-Port USB-C Fast Car Charger 67W",
+    "nameAr": "شاحن سيارة سريع متعدد المنافذ بقدرة 67 واط",
+    "image": "assets/car-charger-banner-3.webp",
+    "images": [
+      "assets/car-charger-banner-3.webp",
+      "assets/car-charger-2.webp",
+      "assets/car-charger-3.webp"
+    ],
+    "rating": 4.9,
+    "reviewsCount": 290,
+    "price": 95.00,
+    "originalPrice": 150.00,
+    "discount": "37% OFF",
+    "isCashOnDelivery": true
+  },
+  {
+    "id": "p18",
+    "brandId": "car-charger-brand",
+    "categoryId": "3",
+    "name": "Transparent PowerDrive Car Adapter 45W",
+    "nameAr": "محول شاحن سيارة شفاف فائق السرعة بقدرة 45 واط",
+    "image": "assets/car-charger-banner-3.webp",
+    "images": [
+      "assets/car-charger-banner-3.webp",
+      "assets/car-charger-2.webp",
+      "assets/car-charger-3.webp"
+    ],
+    "rating": 4.8,
+    "reviewsCount": 130,
+    "price": 69.00,
+    "originalPrice": 110.00,
+    "discount": "37% OFF",
+    "isCashOnDelivery": true
+  }
+]
