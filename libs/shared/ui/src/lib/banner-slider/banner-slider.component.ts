@@ -1,4 +1,4 @@
-import { Component, inject, ViewChild, ElementRef, Output, EventEmitter, computed } from '@angular/core';
+import { Component, inject, ViewChild, ElementRef, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataService } from '@shared/data-access';
 import { ProductCardComponent } from '../product-card/product-card.component';
@@ -9,14 +9,11 @@ import { ProductCardComponent } from '../product-card/product-card.component';
   imports: [CommonModule, ProductCardComponent],
   template: `
     <section class="brand-showcase-section mx-auto px-3 md:px-0 mt-4 md:mt-[40px] mb-6 md:mb-10">
-      
-      <!-- Brand Showcase Container: Fixed 1352px, Hug 699px, Radius 24px, Padding: Right 16px, Bottom 12px, Left 16px -->
       <div 
         class="brand-showcase-container shadow-xl select-none"
         [style.background]="brandGradient()"
       >
-        
-        <!-- Top Banner Component (width: 1352px, height: 149px, rounded-t-[24px], flush to top/sides) -->
+        <!-- Top banner image & arrows -->
         <div class="brand-top-banner group">
           @if (dataService.activeBrand(); as brand) {
             <img 
@@ -26,7 +23,6 @@ import { ProductCardComponent } from '../product-card/product-card.component';
             />
           }
 
-          <!-- Banner Navigation Arrows (width: 32px, height: 40px, angle: 0deg, opacity: 1) -->
           <button 
             type="button" 
             (click)="selectPreviousBrand()"
@@ -43,6 +39,7 @@ import { ProductCardComponent } from '../product-card/product-card.component';
               />
             </svg>
           </button>
+
           <button 
             type="button" 
             (click)="selectNextBrand()"
@@ -61,11 +58,10 @@ import { ProductCardComponent } from '../product-card/product-card.component';
           </button>
         </div>
 
-        <!-- Dynamic Product Cards Row (Left/Right padding 16px, height 460px) -->
+        <!-- Products horizontal slider -->
         <div class="brand-products-wrapper">
-          
-          <!-- Previous Product Arrow Floating Button (Desktop Only) -->
           <button 
+            type="button"
             (click)="scrollProductsLeft()"
             class="hidden md:flex absolute start-2 top-1/2 -translate-y-1/2 z-20 w-[42px] h-[42px] rounded-full bg-white shadow-lg items-center justify-center text-gray-700 hover:text-black hover:scale-105 transition cursor-pointer"
             aria-label="Previous products"
@@ -73,7 +69,6 @@ import { ProductCardComponent } from '../product-card/product-card.component';
             <i class="pi text-sm" [class.pi-chevron-right]="dataService.isRtl()" [class.pi-chevron-left]="!dataService.isRtl()"></i>
           </button>
 
-          <!-- Products Row (gap between each card is 12px) -->
           <div 
             #productScroll
             class="flex items-stretch gap-[12px] overflow-x-auto no-scrollbar scroll-smooth h-full"
@@ -93,8 +88,8 @@ import { ProductCardComponent } from '../product-card/product-card.component';
             }
           </div>
 
-          <!-- Next Product Arrow Floating Button (Desktop Only) -->
           <button 
+            type="button"
             (click)="scrollProductsRight()"
             class="hidden md:flex absolute end-2 top-1/2 -translate-y-1/2 z-20 w-[42px] h-[42px] rounded-full bg-white shadow-lg items-center justify-center text-gray-700 hover:text-black hover:scale-105 transition cursor-pointer"
             aria-label="Next products"
@@ -103,7 +98,7 @@ import { ProductCardComponent } from '../product-card/product-card.component';
           </button>
         </div>
 
-        <!-- View More Button (height: 52px, left/right padding 16px, rounded 10px, background white) -->
+        <!-- View more CTA -->
         <div class="brand-view-more-wrapper hidden md:block">
           <button 
             type="button"
@@ -113,7 +108,6 @@ import { ProductCardComponent } from '../product-card/product-card.component';
             {{ dataService.isRtl() ? 'عرض المزيد' : 'View More' }}
           </button>
         </div>
-
       </div>
     </section>
   `,
@@ -203,11 +197,10 @@ import { ProductCardComponent } from '../product-card/product-card.component';
   `]
 })
 export class BannerSliderComponent {
-  dataService: DataService = inject(DataService);
-  @Output() brandChange = new EventEmitter<string>();
+  readonly dataService = inject(DataService);
   @ViewChild('productScroll') productScroll!: ElementRef<HTMLDivElement>;
 
-  brandGradient = computed(() => {
+  readonly brandGradient = computed(() => {
     const brand = this.dataService.activeBrand();
     if (!brand || brand.id === 'earbuds-brand') {
       return '#8A181A';
@@ -217,20 +210,10 @@ export class BannerSliderComponent {
       : '#8A181A';
   });
 
-  brandColorClass = computed(() => {
-    const brand = this.dataService.activeBrand();
-    return brand?.colorClass || 'bg-brand-red';
-  });
-
-  brandHexColor = computed(() => {
+  readonly brandHexColor = computed(() => {
     const brand = this.dataService.activeBrand();
     return brand?.id === 'earbuds-brand' ? '#8A181A' : (brand?.hexColor || '#8A181A');
   });
-
-  onSelectBrand(brandId: string) {
-    this.dataService.selectBrand(brandId);
-    this.brandChange.emit(brandId);
-  }
 
   selectPreviousBrand() {
     const brands = this.dataService.brands();
@@ -239,7 +222,7 @@ export class BannerSliderComponent {
     const idx = brands.findIndex(b => b.id === currentId);
     const newIdx = (idx - 1 + brands.length) % brands.length;
     if (brands[newIdx]) {
-      this.onSelectBrand(brands[newIdx].id);
+      this.dataService.selectBrand(brands[newIdx].id);
     }
   }
 
@@ -250,7 +233,7 @@ export class BannerSliderComponent {
     const idx = brands.findIndex(b => b.id === currentId);
     const newIdx = (idx + 1) % brands.length;
     if (brands[newIdx]) {
-      this.onSelectBrand(brands[newIdx].id);
+      this.dataService.selectBrand(brands[newIdx].id);
     }
   }
 

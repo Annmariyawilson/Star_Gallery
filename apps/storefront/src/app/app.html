@@ -1,53 +1,42 @@
-<div class="min-h-screen bg-white p-0 flex justify-center selection:bg-[#0DAC57]/20 pb-14 md:pb-0">
+<div class="min-h-screen bg-white flex justify-center selection:bg-[#0DAC57]/20 pb-14 md:pb-0">
   <div 
     [dir]="dataService.isRtl() ? 'rtl' : 'ltr'" 
-    class="w-full max-w-[1512px] bg-white rounded-none md:rounded-[12px] overflow-hidden flex flex-col border-0"
+    class="w-full max-w-[1512px] bg-white rounded-none md:rounded-[12px] overflow-hidden flex flex-col"
   >
-    <!-- Sticky Header with Language Switcher -->
     <app-header class="block md:rounded-t-[12px]"></app-header>
 
-    <!-- Main Content Showcase -->
     <main class="flex-1">
-      <!-- Top Category Slider -->
       <app-category-slider></app-category-slider>
-
-      <!-- Scrollable Brand Banner Slider & Dynamically Filtered Products -->
       <app-banner-slider></app-banner-slider>
     </main>
 
-    <!-- Complete Responsive Footer -->
     <app-footer class="block md:rounded-b-[12px]"></app-footer>
   </div>
 
-  <!-- Mobile Bottom Navigation Bar (Fixed at bottom on < md, matching Screenshot 2) -->
-  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 py-1.5 px-4 flex justify-between items-center shadow-lg">
-    <!-- Categories -->
+  <!-- Mobile bottom navigation -->
+  <nav class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white border-t border-gray-200 py-1.5 px-4 flex justify-between items-center shadow-lg">
     <button type="button" class="flex flex-col items-center justify-center text-[#7F7B87] hover:text-[#0DAC57] transition cursor-pointer">
       <i class="pi pi-th-large text-[18px]"></i>
       <span class="text-[10px] font-medium mt-0.5">{{ dataService.isRtl() ? 'الأقسام' : 'Categories' }}</span>
     </button>
 
-    <!-- Brands -->
     <button type="button" class="flex flex-col items-center justify-center text-[#7F7B87] hover:text-[#0DAC57] transition cursor-pointer">
       <i class="pi pi-tag text-[18px]"></i>
       <span class="text-[10px] font-medium mt-0.5">{{ dataService.isRtl() ? 'الماركات' : 'Brands' }}</span>
     </button>
 
-    <!-- Home (Active) -->
     <button type="button" class="flex flex-col items-center justify-center text-[#0DAC57] cursor-pointer">
-      <div class="w-[28px] h-[28px] rounded-full bg-[#0DAC57] flex items-center justify-center text-white shadow-xs">
+      <div class="w-[28px] h-[28px] rounded-full bg-[#0DAC57] flex items-center justify-center text-white">
         <i class="pi pi-home text-[14px]"></i>
       </div>
       <span class="text-[10px] font-bold mt-0.5">{{ dataService.isRtl() ? 'الرئيسية' : 'Home' }}</span>
     </button>
 
-    <!-- Account -->
     <button type="button" class="flex flex-col items-center justify-center text-[#7F7B87] hover:text-[#0DAC57] transition cursor-pointer">
       <i class="pi pi-user text-[18px]"></i>
       <span class="text-[10px] font-medium mt-0.5">{{ dataService.isRtl() ? 'الحساب' : 'Account' }}</span>
     </button>
 
-    <!-- Cart -->
     <button type="button" class="flex flex-col items-center justify-center text-[#7F7B87] hover:text-[#0DAC57] transition cursor-pointer">
       <i class="pi pi-shopping-cart text-[18px]"></i>
       <span class="text-[10px] font-medium mt-0.5">{{ dataService.isRtl() ? 'السلة' : 'Cart' }}</span>

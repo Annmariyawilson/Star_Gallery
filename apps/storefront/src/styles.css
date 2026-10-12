@@ -9,17 +9,14 @@
   --secondary: #8A181A;
 }
 
-/* Green */
 .bg-brand-green {
-  background-color: rgb(15, 82, 50); /* #0f5232 */
+  background-color: rgb(15, 82, 50);
 }
 
-/* Blue / Teal */
 .bg-brand-blue {
-  background-color: rgb(2, 157, 178); /* #029db2 */
+  background-color: rgb(2, 157, 178);
 }
 
-/* Red */
 .bg-brand-red {
   background-color: #8A181A;
 }
@@ -38,7 +35,6 @@ html, body {
   font-family: 'Tajawal', 'Poppins', sans-serif;
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -61,10 +57,14 @@ html, body {
   pointer-events: none !important;
 }
 
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { 
+  display: none; 
+}
+.no-scrollbar { 
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
 
-/* Shop by Brand container exact dimensions matching Figma (1352px x 699px) */
 .brand-showcase-section {
   width: 100% !important;
   max-width: 1352px !important;

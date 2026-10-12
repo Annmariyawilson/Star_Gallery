@@ -18,11 +18,10 @@ import {
     BannerSliderComponent,
     FooterComponent
   ],
-  templateUrl: './app.html',
-  styleUrl: './app.scss',
+  templateUrl: './app.html'
 })
 export class App implements OnInit {
-  dataService = inject(DataService);
+  readonly dataService = inject(DataService);
 
   ngOnInit() {
     this.dataService.loadInitialData();

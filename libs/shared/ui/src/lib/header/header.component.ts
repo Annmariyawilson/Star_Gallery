@@ -1,20 +1,16 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { DataService } from '@shared/data-access';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule],
   template: `
     <header class="w-full bg-white shadow-xs z-50 sticky top-0 md:rounded-t-[12px]">
-      
-      <!-- Mobile Top Header (Visible on mobile < md) -->
+      <!-- Mobile header -->
       <div class="md:hidden px-3 pt-2 pb-2 bg-white border-b border-gray-100 flex flex-col gap-1.5">
-        <!-- Row 1: Logo, Search Bar, Language Switcher -->
         <div class="flex items-center justify-between gap-2">
-          <!-- Logo -->
           <a href="#" class="shrink-0 select-none">
             <img 
               src="assets/star-gallery-logo.svg" 
@@ -23,7 +19,6 @@ import { DataService } from '@shared/data-access';
             />
           </a>
 
-          <!-- Search Bar -->
           <div class="flex-1 flex items-center h-[36px] border border-[#C2C1C9] rounded-[8px] bg-white overflow-hidden focus-within:border-[#0DAC57]">
             <input 
               type="text" 
@@ -41,7 +36,6 @@ import { DataService } from '@shared/data-access';
             </button>
           </div>
 
-          <!-- Language Switcher -->
           <button 
             type="button"
             (click)="dataService.toggleLanguage()"
@@ -55,7 +49,7 @@ import { DataService } from '@shared/data-access';
           </button>
         </div>
 
-        <!-- Row 2: Location Deliver To Bar -->
+        <!-- Deliver to location bar -->
         <div class="flex items-center gap-1.5 text-[11px] text-[#222029] cursor-pointer pt-0.5">
           <div class="w-4 h-4 rounded-full bg-[#E53935] flex items-center justify-center text-white shrink-0">
             <i class="pi pi-map-marker text-[9px]"></i>
@@ -66,16 +60,10 @@ import { DataService } from '@shared/data-access';
         </div>
       </div>
 
-      <!-- Desktop Top Navbar (Hidden on mobile < md) - 1512px x 75px, px 60px -->
+      <!-- Desktop main navbar -->
       <div class="hidden md:flex w-full max-w-[1512px] mx-auto h-[75px] px-[60px] items-center justify-between bg-white">
-        
-        <!-- Left Section: Logo (152.83px), Deliver To (142.17px), Search Bar (558px) with exact 20px gap -->
         <div class="flex items-center gap-[20px] shrink-0">
-          <!-- Logo -->
-          <a 
-            href="#" 
-            class="h-[48px] flex items-center justify-center shrink-0 select-none group"
-          >
+          <a href="#" class="h-[48px] flex items-center justify-center shrink-0 select-none group">
             <img 
               src="assets/star-gallery-logo.svg" 
               alt="Star Gallery" 
@@ -83,19 +71,14 @@ import { DataService } from '@shared/data-access';
             />
           </a>
 
-          <!-- Deliver To Dropdown (UAE Dubai, 142.17px) -->
-          <div 
-            class="hidden sm:flex flex-col justify-center gap-[4px] w-[142.17px] h-[48.08px] py-[4px] px-[12px] bg-[#F9F9F9] hover:bg-gray-100 transition rounded-[8px] cursor-pointer select-none shrink-0"
-          >
-            <!-- Deliver to label -->
+          <!-- Deliver to location -->
+          <div class="hidden sm:flex flex-col justify-center gap-[4px] w-[142.17px] h-[48.08px] py-[4px] px-[12px] bg-[#F9F9F9] hover:bg-gray-100 transition rounded-[8px] cursor-pointer select-none shrink-0">
             <span class="w-[47px] h-[14px] text-[10px] text-[#7F7B87] font-normal leading-[14px] tracking-[0.04em] whitespace-nowrap">
               {{ dataService.isRtl() ? 'التوصيل إلى' : 'Deliver to' }}
             </span>
 
-            <!-- Bottom Row: Flag, Dubai, Chevron Icon (118.17px x 20px) -->
             <div class="w-[118.17px] h-[20px] flex items-center justify-between">
               <div class="flex items-center gap-[6px]">
-                <!-- UAE Flag Mini SVG (26.67px x 20px, radius 1.67px) -->
                 <div class="w-[26.67px] h-[20px] rounded-[1.67px] overflow-hidden flex shrink-0 shadow-2xs border border-gray-200/40">
                   <div class="w-[7px] h-full bg-[#FF0000]"></div>
                   <div class="flex-1 flex flex-col h-full">
@@ -105,20 +88,18 @@ import { DataService } from '@shared/data-access';
                   </div>
                 </div>
 
-                <!-- Dubai City Name -->
                 <span class="w-[36px] h-[20px] flex items-center text-[12px] font-medium text-black leading-none whitespace-nowrap">
                   {{ dataService.isRtl() ? 'دبي' : 'Dubai' }}
                 </span>
               </div>
 
-              <!-- Dropdown Icon (1.5px stroke chevron) -->
               <svg class="w-[7px] h-[13.5px] text-[#7F7B87] shrink-0" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 5L3.5 7.5L6 5" stroke="#7F7B87" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
           </div>
 
-          <!-- Search Bar (558px x 46px, exactly 20px gap from Deliver To) -->
+          <!-- Search input -->
           <div class="w-[558px] h-[46px] rounded-[12px] border-[0.5px] border-[#A7A5AF] bg-white flex items-center justify-between pt-[8px] pr-[2px] pb-[8px] pl-[12px] overflow-hidden focus-within:border-[#0DAC57] transition shrink-0">
             <input 
               type="text" 
@@ -139,10 +120,8 @@ import { DataService } from '@shared/data-access';
           </div>
         </div>
 
-        <!-- Right: Actions (Language, Account, Wishlist, Cart) - width 427px, height 75px, gap 20px -->
+        <!-- User actions -->
         <div class="w-[427px] h-[75px] flex items-center gap-[20px] shrink-0">
-          
-          <!-- Language Toggle Button (91.75px x 75px, gap 10px, padding 4px) -->
           <button 
             type="button"
             (click)="dataService.toggleLanguage()"
@@ -159,7 +138,6 @@ import { DataService } from '@shared/data-access';
             </span>
           </button>
 
-          <!-- Account (91.75px x 75px, gap 10px, padding 4px) -->
           <a href="#" class="w-[91.75px] h-[75px] p-[4px] flex flex-col items-center justify-center gap-[10px] text-[#57545B] hover:text-[#0DAC57] transition group shrink-0">
             <img src="assets/user.svg" alt="Account" class="w-[24px] h-[24px] group-hover:scale-105 transition-transform shrink-0" />
             <span class="text-[12px] font-normal leading-[140%] text-[#57545B] group-hover:text-[#0DAC57] transition-colors text-center whitespace-nowrap font-['Poppins',sans-serif]">
@@ -167,7 +145,6 @@ import { DataService } from '@shared/data-access';
             </span>
           </a>
 
-          <!-- Wishlist (91.75px x 75px, gap 10px, padding 4px) -->
           <a href="#" class="w-[91.75px] h-[75px] p-[4px] flex flex-col items-center justify-center gap-[10px] text-[#57545B] hover:text-[#B33036] transition group shrink-0">
             <img src="assets/heart.svg" alt="Wishlist" class="w-[24px] h-[24px] group-hover:scale-105 transition-transform shrink-0" />
             <span class="text-[12px] font-normal leading-[140%] text-[#57545B] group-hover:text-[#B33036] transition-colors text-center whitespace-nowrap font-['Poppins',sans-serif]">
@@ -175,42 +152,34 @@ import { DataService } from '@shared/data-access';
             </span>
           </a>
 
-          <!-- Cart (91.75px x 75px, gap 10px, padding 4px) -->
           <a href="#" class="w-[91.75px] h-[75px] p-[4px] flex flex-col items-center justify-center gap-[10px] text-[#57545B] hover:text-[#0DAC57] transition group shrink-0">
             <img src="assets/shopping-cart.svg" alt="Cart" class="w-[24px] h-[24px] group-hover:scale-105 transition-transform shrink-0" />
             <span class="text-[12px] font-normal leading-[140%] text-[#57545B] group-hover:text-[#0DAC57] transition-colors text-center whitespace-nowrap font-['Poppins',sans-serif]">
               {{ dataService.isRtl() ? 'السلة' : 'Cart' }}
             </span>
           </a>
-
         </div>
       </div>
 
-      <!-- Categories & Sub-Navigation Bar (Desktop only, hidden on mobile) - width: 1512px, height: 48px, background: #FBFBFC, border-y -->
+      <!-- Categories bar -->
       <div class="hidden md:block w-full bg-[#FBFBFC] border-t border-b border-[#E0E0E5]">
         <div class="max-w-[1512px] w-full mx-auto h-[48px] px-[60px] flex items-center justify-between">
-          
-          <!-- Left Section: Categories button + Nav Links (width: 940px, showing Ca> with chevron matching Image 2) -->
           <div class="w-[940px] h-[48px] flex items-center gap-[20px] relative overflow-hidden shrink-0">
-            <!-- Categories Dropdown Button (149px x 48px, only hover display white) -->
             <button 
               type="button" 
               class="w-[149px] h-[48px] p-[12px] bg-transparent text-[#222029] rounded-tr-[12px] rounded-bl-[12px] border border-transparent hover:bg-white hover:border-[#E0E0E5] flex items-center gap-[4px] transition shrink-0 cursor-pointer select-none"
             >
-              <!-- 4-Square Category Icon (24px x 24px) -->
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-[24px] h-[24px] shrink-0" xmlns="http://www.w3.org/2000/svg">
                 <rect x="3.5" y="3.5" width="6.5" height="6.5" rx="1.5" stroke="#222029" stroke-width="1.8"/>
                 <rect x="14" y="3.5" width="6.5" height="6.5" rx="1.5" stroke="#222029" stroke-width="1.8"/>
                 <rect x="3.5" y="14" width="6.5" height="6.5" rx="1.5" stroke="#222029" stroke-width="1.8"/>
                 <rect x="14" y="14" width="6.5" height="6.5" rx="1.5" stroke="#222029" stroke-width="1.8"/>
               </svg>
-              <!-- Categories Label (width: 89px, height: 24px, 16px Poppins 400 capitalize) -->
               <span class="w-[89px] h-[24px] flex items-center font-['Poppins',sans-serif] font-normal text-[16px] leading-none capitalize text-[#222029] whitespace-nowrap">
                 {{ dataService.isRtl() ? 'الفئات' : 'Categories' }}
               </span>
             </button>
 
-            <!-- Navigation Links Container (gap between each text is 20px) -->
             <nav class="flex-1 h-[48px] flex items-center gap-[20px] text-[16px] leading-[140%] font-normal text-[#222029] whitespace-nowrap font-['Poppins',sans-serif] overflow-hidden">
               <a href="#" class="h-[48px] flex items-center hover:text-[#0DAC57] transition shrink-0">{{ dataService.isRtl() ? 'الإلكترونيات' : 'Electronics' }}</a>
               <a href="#" class="h-[48px] flex items-center hover:text-[#0DAC57] transition shrink-0">{{ dataService.isRtl() ? 'المنزل والمطبخ' : 'Home & Kitchen' }}</a>
@@ -220,7 +189,6 @@ import { DataService } from '@shared/data-access';
               <a href="#" class="h-[48px] flex items-center hover:text-[#0DAC57] transition shrink-0">{{ dataService.isRtl() ? 'إكسسوارات السيارات' : 'Car Accessories' }}</a>
             </nav>
 
-            <!-- fluent:ios-arrow-24-filled chevron with linear-gradient background (width 21.6px, height 48px, vector 9.17px x 17.5px) -->
             <div 
               class="absolute end-0 top-0 h-[48px] w-[26px] flex items-center justify-end pointer-events-none" 
               [style.background]="dataService.isRtl() 
@@ -233,7 +201,6 @@ import { DataService } from '@shared/data-access';
             </div>
           </div>
 
-          <!-- Right Promotional App Store Banner (width: 240px, height: 48px) -->
           <a href="#" class="w-[240px] h-[48px] flex items-center justify-end shrink-0 hover:opacity-95 transition">
             <img 
               src="assets/app.webp" 
@@ -241,14 +208,13 @@ import { DataService } from '@shared/data-access';
               class="w-[240px] h-[48px] object-contain rounded-[4px]" 
             />
           </a>
-
         </div>
       </div>
     </header>
   `
 })
 export class HeaderComponent {
-  dataService: DataService = inject(DataService);
+  readonly dataService = inject(DataService);
 
   onSearchInput(event: Event) {
     const target = event.target as HTMLInputElement;

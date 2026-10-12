@@ -1,6 +1,6 @@
 import { Component, inject, ViewChild, ElementRef, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DataService, Category } from '@shared/data-access';
+import { DataService } from '@shared/data-access';
 
 @Component({
   selector: 'app-category-slider',
@@ -8,8 +8,7 @@ import { DataService, Category } from '@shared/data-access';
   imports: [CommonModule],
   template: `
     <section class="max-w-[1352px] w-full mx-auto px-3 md:px-0 mt-4 md:mt-6 mb-0">
-      
-      <!-- Mobile View (2-Row Paginated Grid/Scroll matching Screenshot 1) -->
+      <!-- Mobile view: 2-row paginated grid -->
       <div class="md:hidden">
         <div 
           #mobileScrollContainer
@@ -44,7 +43,7 @@ import { DataService, Category } from '@shared/data-access';
           }
         </div>
 
-        <!-- 2 Mobile Indicator Dots (Interactive & Synchronized) -->
+        <!-- Mobile pagination dots -->
         <div class="flex items-center justify-center gap-1.5 mt-2.5">
           <button
             type="button"
@@ -63,14 +62,10 @@ import { DataService, Category } from '@shared/data-access';
         </div>
       </div>
 
-      <!-- Desktop View: Exactly 1352px x 188px, background #FBFBFC, border-radius 12px -->
+      <!-- Desktop view: horizontal scroll container -->
       <div class="hidden md:block relative w-[1352px] h-[188px] bg-[#FBFBFC] rounded-[12px] mx-auto overflow-visible">
-        
-        <!-- Next and Previous Buttons: width: 1394px; height: 48px; top: 61px; left: -21px; -->
-        <div 
-          class="absolute -start-[21px] top-[61px] w-[1394px] h-[48px] flex justify-between items-center pointer-events-none z-20"
-        >
-          <!-- Previous Button -->
+        <!-- Floating navigation buttons -->
+        <div class="absolute -start-[21px] top-[61px] w-[1394px] h-[48px] flex justify-between items-center pointer-events-none z-20">
           <button 
             type="button"
             (click)="scrollLeft()"
@@ -80,7 +75,6 @@ import { DataService, Category } from '@shared/data-access';
             <img src="assets/left-arrow.svg" alt="Previous" class="w-[12px] h-[16px]" [class.rotate-180]="dataService.isRtl()" />
           </button>
 
-          <!-- Next Button -->
           <button 
             type="button"
             (click)="scrollRight()"
@@ -91,21 +85,18 @@ import { DataService, Category } from '@shared/data-access';
           </button>
         </div>
 
-        <!-- Category Move: width: 1352px; height: 164px; gap: 16px; border-radius: 12px; -->
         <div 
           #scrollContainer
           (scroll)="onDesktopScroll()"
           class="w-[1352px] h-[164px] flex items-center gap-[16px] overflow-x-auto no-scrollbar scroll-smooth rounded-[12px] px-[16px]"
         >
           @for (cat of dataService.categories(); track cat.id) {
-            <!-- Single Category: width: 130px; height: 164px; gap: 8px; padding-left/right/bottom: 8px; background: #FBFBFB; -->
             <div 
               (click)="dataService.selectCategory(cat.id)"
               class="w-[130px] h-[164px] shrink-0 rounded-[12px] bg-[#FBFBFB] flex flex-col items-center gap-[8px] pl-[8px] pr-[8px] pb-[8px] pt-0 cursor-pointer select-none transition-all duration-200 hover:shadow-xs group/item"
               [class.ring-2]="dataService.selectedCategoryId() === cat.id"
               [class.ring-[#0DAC57]]="dataService.selectedCategoryId() === cat.id"
             >
-              <!-- Image: width: 114px; height: 128px; -->
               <div class="w-[114px] h-[128px] shrink-0 flex items-center justify-center overflow-hidden">
                 <img 
                   [src]="cat.image" 
@@ -115,7 +106,6 @@ import { DataService, Category } from '@shared/data-access';
                 />
               </div>
 
-              <!-- Category Name: font-family Poppins, 500 Medium, 14px, line-height 140%, background/color #000000 -->
               <span 
                 class="font-['Poppins',sans-serif] font-medium text-[14px] leading-[140%] text-center text-[#000000] truncate w-full group-hover/item:text-[#0DAC57] transition"
               >
@@ -125,7 +115,7 @@ import { DataService, Category } from '@shared/data-access';
           }
         </div>
 
-        <!-- Indicator: Height 24px (188px - 164px) centered at bottom -->
+        <!-- Desktop pagination bar -->
         <div class="h-[24px] flex items-center justify-center gap-1.5">
           <button
             type="button"
@@ -142,19 +132,17 @@ import { DataService, Category } from '@shared/data-access';
             aria-label="Category Page 2"
           ></button>
         </div>
-
       </div>
-
     </section>
   `
 })
 export class CategorySliderComponent {
-  dataService: DataService = inject(DataService);
+  readonly dataService = inject(DataService);
   @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLDivElement>;
   @ViewChild('mobileScrollContainer') mobileScrollContainer!: ElementRef<HTMLDivElement>;
 
-  desktopPage = signal<number>(0);
-  mobilePage = signal<number>(0);
+  readonly desktopPage = signal<number>(0);
+  readonly mobilePage = signal<number>(0);
 
   scrollLeft() {
     const el = this.scrollContainer.nativeElement;
